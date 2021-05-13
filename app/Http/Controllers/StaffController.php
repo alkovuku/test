@@ -11,4 +11,9 @@ class StaffController extends Controller
     {
         return view('staff.staff_add');
     }
+
+    public function staff_add_check(Request $request)
+    {
+        return view('staff.staff_add_check');
+    }
 }
