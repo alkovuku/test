@@ -2,8 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>@yidld('title')</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+        <title>@yield('title')</title>
     </head>
     <body>
         @section('main')

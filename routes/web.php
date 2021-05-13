@@ -16,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('staff/staff_add', 'StaffController@staff_add');
