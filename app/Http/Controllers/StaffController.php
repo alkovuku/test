@@ -16,4 +16,9 @@ class StaffController extends Controller
     {
         return view('staff.staff_add_check');
     }
+
+    public function staff_add_done()
+    {
+        return view('staff.staff_add_done');
+    }
 }

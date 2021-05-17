@@ -20,3 +20,4 @@ Route::get('/', function () {
 Route::get('staff/staff_add', 'StaffController@staff_add');
 
 Route::post('staff/staff_add_check', 'StaffController@staff_add_check');
+Route::post('staff/staff_add_done', 'StaffController@staff_add_done');
