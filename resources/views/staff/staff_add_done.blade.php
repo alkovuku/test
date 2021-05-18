@@ -35,4 +35,11 @@
         }
     ?>
     <a href="staff_list.php"> 戻る</a>
+
+    <form method="post" action="/staff/store">
+        @csrf
+        {{$name}}さんを追加しました。<br />
+    </form>
+
+    <a href="staff_list.php">戻る</a>
 @endsection

@@ -24,8 +24,8 @@
 		<!-- $staff_pass=md5($staff_pass); -->
 		<form method="post" action="/staff/staff_add_done">
 			@csrf
-			<input type="hidden" name="name" value="'.$staff_name.'">
-			<input type="hidden" name="pass" value="'.$staff_pass.'">
+			<input type="hidden" name="name" value="'.$name.'">
+			<input type="hidden" name="pass" value="'.$pass.'">
 			<br />
 			<input type="button" onclick="history.back()" value="戻る">
 			<input type="submit" value="ＯＫ">

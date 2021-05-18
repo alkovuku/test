@@ -13,3 +13,5 @@
 /storage/**
 /vendor/**
 !/.gitignore
+!/config/**
+!/.env
