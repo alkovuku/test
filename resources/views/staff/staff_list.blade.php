@@ -1,5 +1,5 @@
 @extends('layouts.base')
-@section('title', 'スタッフ追加')
+@section('title', 'スタッフ一覧')
 
 @section('main')
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
@@ -10,11 +10,19 @@
         </tr>
         @foreach ($records as $record)
             <tr>
-                <td>{{ $record->code }}</td>
+                <td>{{ $record->id }}</td>
                 <td>{{ $record->name }}</td>
                 <td>
-                    <a href="/save/{{ $record->id }}/edit">編集</a>｜
-                    <a href="/save/{{ $record->id }}">削除</a>
+                    <!-- <a href="/save/{{ $record->id }}/edit">編集</a>｜
+                    <a href="/save/{{ $record->id }}">削除</a> -->
+                    <form method="get" action="/staff/{{ $record->id }}/staff_edit">
+                        <input type="submit" value="編集">
+                    </form>
+                </td>
+                <td>
+                    <form method="get" action="/staff/{{ $record->id }}">
+                            <input type="submit" value="削除">
+                    </form>
                 </td>
             </tr>
         @endforeach

@@ -39,8 +39,15 @@ class StaffController extends Controller
     /**
      * staff_edit
      */
-    public function staff_edit($code)
+    public function staff_edit($id)
     {
-        return view('staff_edit', ['staff'=>Staff::findOrFail($code)]);
+        return view('staff.staff_edit', ['staff' => Staff::findOrFail($id)]);
+    }
+
+    public function staff_edit_done(Request $request, $id)
+    {
+        $staff = Staff::find($id);
+        $staff->fill($request->except('_token', '_method'))->save();
+        return redirect('staff/staff_list');
     }
 }
