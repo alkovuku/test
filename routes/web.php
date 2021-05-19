@@ -17,7 +17,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+/**
+ * staff_add
+ */
 Route::get('staff/staff_add', 'StaffController@staff_add');
-
 Route::post('staff/staff_add_check', 'StaffController@staff_add_check');
 Route::post('staff/staff_add_done', 'StaffController@staff_add_done');
+
+/**
+ * staff_list
+ */
+Route::get('staff/staff_list', 'StaffController@staff_list');
+
+/**
+ * staff_edit
+ */
+Route::get('staff/{code}/staff_edit', 'StaffController@staff_edit');
+Route::patch('staff/{code}', 'StaffController@staff_edit_done');

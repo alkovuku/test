@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-// use App\Book;
+use App\Staff;
 
 class StaffController extends Controller
 {
+    /**
+     * staff_add
+     */
     public function staff_add()
     {
         return view('staff.staff_add');
@@ -21,6 +24,23 @@ class StaffController extends Controller
     {
         $staff = new Staff();
         $staff->fill($request->except('_token'))->save();
-        return view('staff.staff_add_done');
+        return view('staff.staff_add_done', $request);
+    }
+
+    /**
+     * staff_list
+     */
+    public function staff_list()
+    {
+        $records = ['records' => Staff::all()];
+        return view('staff.staff_list', $records);
+    }
+
+    /**
+     * staff_edit
+     */
+    public function staff_edit($code)
+    {
+        return view('staff_edit', ['staff'=>Staff::findOrFail($code)]);
     }
 }
