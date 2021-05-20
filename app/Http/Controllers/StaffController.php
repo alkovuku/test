@@ -50,4 +50,19 @@ class StaffController extends Controller
         $staff->fill($request->except('_token', '_method'))->save();
         return redirect('staff/staff_list');
     }
+
+    /**
+     * staff_delete
+     */
+    public function staff_delete($id)
+    {
+        return view('staff.staff_delete', ['staff' => Staff::findOrFail($id)]);
+    }
+
+    public function staff_delete_done($id)
+    {
+        $staff = Staff::findOrFail($id);
+        $staff->delete();
+        return redirect('staff/staff_list');
+    }
 }

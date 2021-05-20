@@ -20,7 +20,7 @@
                     </form>
                 </td>
                 <td>
-                    <form method="get" action="/staff/{{ $record->id }}">
+                    <form method="get" action="/staff/{{ $record->id }}/staff_delete">
                             <input type="submit" value="削除">
                     </form>
                 </td>

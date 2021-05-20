@@ -34,3 +34,9 @@ Route::get('staff/staff_list', 'StaffController@staff_list');
  */
 Route::get('staff/{code}/staff_edit', 'StaffController@staff_edit');
 Route::patch('staff/{code}', 'StaffController@staff_edit_done');
+
+/**
+ * staff_delete
+ */
+Route::get('staff/{code}/staff_delete', 'StaffController@staff_delete');
+Route::delete('staff/{code}', 'StaffController@staff_delete_done');

@@ -7,7 +7,7 @@
     <form method="post" action="/staff/staff_add_check">
         @csrf
         スタッフ名を入力してください。<br />
-        <input type="text" name="name" style="width:200px"><br />
+        <input type="text" name="name" size="15" value="{{ old('name') }}"><br />
         パスワードを入力してください。<br />
         <input type="password" name="pass" style="width:100px"><br />
         パスワードをもう１度入力してください。<br />
